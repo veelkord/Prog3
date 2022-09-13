@@ -10,6 +10,8 @@ Käivitamine:
 Klooni repo
 git clone https://github.com/veelkord/Prog3.git
 
+cd Prog3
+
 esmakordsel käivitamisel
 docker-compose up --build
 
