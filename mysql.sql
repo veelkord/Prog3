@@ -6,7 +6,7 @@ CREATE TABLE subject_db (
   `id` INT NOT NULL AUTO_INCREMENT,
   `subject` VARCHAR(100) NOT NULL,
   `lecturer` VARCHAR(100) NOT NULL,
-  `load` INT NOT NULL,
+  `work_load` INT NOT NULL,
   PRIMARY KEY (`id`));
 
 

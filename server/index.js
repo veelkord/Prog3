@@ -3,13 +3,11 @@ const app = express();
 const mysql = require("mysql2");
 const cors = require("cors");
 
-dotenv.config();
 const db = mysql.createPool({
-  host: process.env.DB_HOST,
-  PORT: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  host: "mysql_server",
+  user: "admin",
+  password: "letmein",
+  database: "crud_subject",
 });
 
 app.use(cors());
@@ -61,17 +59,6 @@ app.put("/api/update/:id", (req, res) => {
     }
     res.send(result);
   });
-});
-
-app.get("/", (req, res) => {
-  // const sqlInsert =
-  //   "INSERT INTO subject_db(subject, lecturer, work_load) VALUES ('Kotijooks', 'Kott Jooks', 10)";
-  // db.query(sqlInsert, (error, result) => {
-  //   console.log("error", error);
-  //   console.log("result", result);
-  //   res.send("Hello Express");
-  // });
-  // res.send("Hello Express");
 });
 
 app.listen(3000, () => {
